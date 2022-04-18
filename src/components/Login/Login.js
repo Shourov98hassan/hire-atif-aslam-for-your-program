@@ -1,14 +1,14 @@
 import React, { useState } from 'react';
 import { Button, Form } from 'react-bootstrap';
-import { useSignInWithEmailAndPassword,} from 'react-firebase-hooks/auth';
+import { useSignInWithEmailAndPassword, } from 'react-firebase-hooks/auth';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
-import {  signInWithPopup, GoogleAuthProvider } from "firebase/auth";
+import { signInWithPopup, GoogleAuthProvider } from "firebase/auth";
 import auth from '../../firebase.init';
 import './Login.css'
 
 const Login = () => {
-    const [email,setEmail] = useState('')
-    const [password,setPassword] = useState('')
+    const [email, setEmail] = useState('')
+    const [password, setPassword] = useState('')
     const navigate = useNavigate()
     const location = useLocation()
 
@@ -19,55 +19,53 @@ const Login = () => {
         user,
         loading,
         error,
-      ] = useSignInWithEmailAndPassword(auth);
-      const provider = new GoogleAuthProvider();
-      
+    ] = useSignInWithEmailAndPassword(auth);
+    const provider = new GoogleAuthProvider();
 
-     
 
-    const handleEmailBlur=event=>{
+    const handleEmailBlur = event => {
         setEmail(event.target.value)
-      }
+    }
 
-      if (loading) {
+    if (loading) {
         return <p>Loading...</p>;
-      }
+    }
 
-      if(user){
-           navigate(from, { replace: true });
-      }
+    if (user) {
+        navigate(from, { replace: true });
+    }
 
-      if (error) {
+    if (error) {
         return (
-          <div>
-            <p>Error: {error.message}</p>
-          </div>
+            <div>
+                <p>Error: {error.message}</p>
+            </div>
         );
-      }
-      
-     
-    
-      const handlePasswordBlur=event=>{
+    }
+
+
+
+    const handlePasswordBlur = event => {
         setPassword(event.target.value)
-      }
+    }
 
-      const handleSubmit=event=>{
-          event.preventDefault()
-          signInWithEmailAndPassword(email,password);
-      }
+    const handleSubmit = event => {
+        event.preventDefault()
+        signInWithEmailAndPassword(email, password);
+    }
 
-      const googleSignIn=()=>{
-        signInWithPopup(auth,provider)
-        .then((result)=>{
-            const user = result.user;
-            console.log(user)
-            navigate('/home')
+    const googleSignIn = () => {
+        signInWithPopup(auth, provider)
+            .then((result) => {
+                const user = result.user;
+                console.log(user)
+                navigate('/home')
 
-        })
-        .catch((error)=>{
-            console.error(error)
-        })
-      }
+            })
+            .catch((error) => {
+                console.error(error)
+            })
+    }
 
 
     return (
@@ -90,8 +88,8 @@ const Login = () => {
                 <Button variant="primary" type="submit">
                     Login
                 </Button><br />
-               
-               
+
+
             </Form>
             <button onClick={googleSignIn} className='mt-2 btn btn-info'>Login by Google</button>
         </div>
