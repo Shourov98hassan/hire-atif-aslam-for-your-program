@@ -5,6 +5,6 @@ My Project Link [Click Here](https://atif-aslam-c6e56.web.app).
 * Login Page
 * Register Page
 * Checkout Services Page
-* Requires Auth
 * Protected Routes
+* Requires Auth to access Protected  Routes
 
