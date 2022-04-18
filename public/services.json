@@ -1,0 +1,45 @@
+[
+    {
+        "id": 1,
+        "name": "Concert",
+        "price": "2000000",
+        "description": "Live concert is very amazing for me.i enjoy it really.",
+        "img": "https://www.imagediamond.com/blog/wp-content/uploads/2020/04/atif-aslam-images36.jpg"
+    },
+    {
+        "id": 2,
+        "name": "Bollywood",
+        "price": "1500000",
+        "description": "Bollywood that means india is my second home.i would like to sing a song for bollywood very much",
+        "img": "https://www.imagediamond.com/blog/wp-content/uploads/2020/04/atif-aslam-images28.jpg"
+    },
+    {
+        "id": 3,
+        "name": "Movie",
+        "price": "700000",
+        "description": "My maximum fan like my movie song .so really want to sing song for latest movies.",
+        "img": "https://www.imagediamond.com/blog/wp-content/uploads/2020/04/atif-aslam-images25.jpg"
+    },
+    {
+        "id": 4,
+        "name": "Drama",
+        "price": "500000",
+        "description": "Recently i finished  a drama which name is 'Sang-E-Mah' and i also released a song which title is 'Sang-E-Mah' ",
+        "img": "https://www.imagediamond.com/blog/wp-content/uploads/2020/04/atif-aslam-images32.jpg"
+    },
+    {
+        "id": 5,
+        "name": "Advertise",
+        "price": "300000",
+        "description": "I have many advertise with Pepsi.recently i have done a tvc on pepsi.",
+        "img": "https://sm.mashable.com/mashable_pk/photo/default/yyecsdok-atif-aslam_5w8m.jpg"
+    },
+    {
+        "id": 6,
+        "name": "Tv Programme",
+        "price": "200000",
+        "description": "Tv programme is more enjoyable for me.when i get a chance,i dont miss it.",
+        "img": "https://wallpaperaccess.com/full/2108244.jpg"
+    }
+   
+]
